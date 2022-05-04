@@ -22,7 +22,7 @@ def main():
         skills = ", ".join(dict_student["skills"])
         print(f'Знает: {skills}')
         # спрашиваем о профессии
-        user_profession = input(f'Выберите специальность для оценки студента {dict_student["full_name"]}: ')
+        user_profession = input(f'Выберите специальность для оценки студента {full_name}: ')
         # вызываем функцию, которая возвращает данные о выбранной профессии
         dict_profession = functions.get_profession_by_title(user_profession, dict_all_professions)
         # проверяем что вернулась не пустота
