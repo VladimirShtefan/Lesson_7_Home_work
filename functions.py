@@ -14,9 +14,6 @@ def load_json(file_path):
     if os.path.exists(file_path):
         with open(file_path, encoding='utf-8') as file:
             return json.load(file)
-    else:
-        print('Файл не существует')
-        return
 
 
 def get_student_by_pk(pk, students_list):
@@ -33,8 +30,6 @@ def get_student_by_pk(pk, students_list):
         for student in students_list:
             if student['pk'] == int(pk):
                 return student
-    print('У нас нет такого студента')
-    return
 
 
 def get_profession_by_title(title, prof_list):
@@ -50,8 +45,6 @@ def get_profession_by_title(title, prof_list):
     for prof in prof_list:
         if prof['title'].lower() == title.lower():
             return prof
-    print('У нас нет такой специальности')
-    return
 
 
 def check_fitness(student, profession):
